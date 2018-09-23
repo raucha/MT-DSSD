@@ -146,8 +146,13 @@ MODEL_PATH = "`<Your Trained Model Path>"
 続いて，`Test_SSD_seg_fast.py`を実行して下さい．指定されたパスにある指定された拡張子の画像すべてを用いてテストを行います．
 
 ```
-python Test_SSD_seg_fast.py --dir '<Your Dataset Path>/test_known/rgb' --out './out' --type '.png' --gpu 0
+python Test_SSD_seg_fast.py --indir '<Your Dataset Path>/test_known/rgb' --outdir './out' --gpu 0
 ```
+```
+# 例
+python Test_SSD_seg_fast.py --indir '/home/group_work/arc_project/data/ARCdataset_png/test_known/rgb/' --outdir '/home/group_work/out_epoch130' --gpu 0
+```
+
 下記の引数を与えることができます．
 - `--webcam` (default = -1) : 1を指定するとWebCamから得られる画像を用いてリアルタイム検出を行います．
 - `--indir` : テスト用画像のあるパス
